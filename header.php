@@ -45,7 +45,7 @@
         <div class="right">
         <div class="search">
             <form id="search" method="post" action="<?php $this->options->siteUrl(); ?>" role="search">
-                <input type="text" id="s" name="s" class="text" placeholder="<?php _e('搜索其实很简单'); ?>" />
+                <input type="text" id="s" name="s" placeholder="<?php _e('搜索其实很简单'); ?>" />
             </form>
         </div>
         <div class="nav-PC">
