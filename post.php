@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 <?php $this->need('header.php'); ?>
 <?php if (array_key_exists('img',unserialize($this->___fields()))): ?>
-    <?php echo '<div class="post-img" style="background-image: url('; ?><?php $this->fields->img(); ?><?php echo ')"></div>'; ?><?php else: ?><?php preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);$imgCount = count($matches[0]);if($imgCount >= 1){$img = $matches[2][0];echo '<div class="post-img" style="background-image: url('.$img.')"></div>';}else {echo '<div class="post-img" style="background-image: url(/usr/themes/Diary/img/'.rand(1,7).'.png)"></div>';}?><?php endif; ?>
+    <?php echo '<div class="post-img" style="background-image: url('; ?><?php $this->fields->img(); ?><?php echo ')"></div>'; ?><?php else: ?><?php preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);$imgCount = count($matches[0]);if($imgCount >= 1){$img = $matches[2][0];echo '<div class="post-img" style="background-image: url('.$img.')"></div>';}else {echo '<div class="post-img" style="background-image: url(/usr/themes/Diary/img/'.rand(1,10).'.png)"></div>';}?><?php endif; ?>
 <div id="main">
     <article class="post">
         <div class="frame">
