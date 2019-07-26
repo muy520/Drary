@@ -24,7 +24,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 				<?php if (array_key_exists('weather',unserialize($this->___fields()))): ?><?php echo '<img class="icon-weather" src="/usr/themes/Diary/img/weather/'; ?><?php $this->fields->weather(); ?><?php echo '.png">'; ?><?php else: ?><?php echo '<img class="icon-weather" src="/usr/themes/Diary/img/weather/sunny.png">'; ?><?php endif; ?>
 			</div>
 			<a href="<?php $this->permalink() ?>">
-				<?php if (array_key_exists('img',unserialize($this->___fields()))): ?><?php echo '<div class="index-text-img" style="background-image: url('; ?><?php $this->fields->img(); ?><?php echo ')">'; ?><?php else: ?><?php preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);$imgCount = count($matches[0]);if($imgCount >= 1){$img = $matches[2][0];echo '<div class="index-text-img" style="background-image: url('.$img.')">';}else {echo '<div class="index-text-img" style="background-image: url(/usr/themes/Diary/img/'.rand(1,7).'.png)">';} ?><?php endif; ?>
+				<?php if (array_key_exists('img',unserialize($this->___fields()))): ?><?php echo '<div class="index-text-img" style="background-image: url('; ?><?php $this->fields->img(); ?><?php echo ')">'; ?><?php else: ?><?php preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);$imgCount = count($matches[0]);if($imgCount >= 1){$img = $matches[2][0];echo '<div class="index-text-img" style="background-image: url('.$img.')">';}else {echo '<div class="index-text-img" style="background-image: url(/usr/themes/Diary/img/'.rand(1,10).'.png)">';} ?><?php endif; ?>
 		        </div>
 		        <div class="text-img">
 					<h2 class="index-title-img"><?php $this->title() ?></h2>
