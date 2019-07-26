@@ -7,16 +7,6 @@ function themeConfig($form) {
     
     $searchUrl = new Typecho_Widget_Helper_Form_Element_Text('searchUrl', NULL, NULL, _t('站点 搜索 地址'), _t('在这里填入一个搜索 URL 地址,'));
     $form->addInput($searchUrl);
-
-    $sidebarBlock = new Typecho_Widget_Helper_Form_Element_Checkbox('sidebarBlock', 
-    array('ShowRecentPosts' => _t('显示最新文章'),
-    'ShowRecentComments' => _t('显示最近回复'),
-    'ShowCategory' => _t('显示分类'),
-    'ShowArchive' => _t('显示归档'),
-    'ShowOther' => _t('显示其它杂项')),
-    array('ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowOther'), _t('侧边栏显示'));
-    
-    $form->addInput($sidebarBlock->multiMode());
     
     $indexImg = new Typecho_Widget_Helper_Form_Element_Radio('indexImg',
         array('able' => _t('启用'),
