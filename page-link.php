@@ -13,7 +13,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 	<h1 class="post-title frame" itemprop="name headline"><?php $this->title() ?></h1>
 <div class="post-content frame" itemprop="articleBody">
 <div itemprop="articleBody">
-	<script>function link(link, name, label){document.write("<a class=\"link\" href=\"https:\/\/");document.write(link);document.write("\" target=\"_blank\">");document.write("<span class=\"name\">");document.write(name);document.write("<\/span>");document.write("<span class=\"label\">");document.write(label);document.write("<\/span>");document.write("<\/a>");}</script>
+	<script>function link(link, name, label){document.write("<a class=\"link\" href=\"\/\/");document.write(link);document.write("\" target=\"_blank\">");document.write("<span class=\"name\">");document.write(name);document.write("<\/span>");document.write("<span class=\"label\">");document.write(label);document.write("<\/span>");document.write("<\/a>");}</script>
     <?php $this->content(); ?>
 </div>
 </div>
