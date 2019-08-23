@@ -1,6 +1,6 @@
 <?php
 /**
- * 这是 Diary 主题，仿 你的日记 和 卡片日记 这两款款软件
+ * 这是 Diary 主题，仿 你的日记 这款软件
  * 
  * @package Diary
  * @author Muyang
@@ -17,30 +17,30 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 	<div>
 	<?php if ($this->options->indexImg == 'able'): ?>
 	<?php while($this->next()): ?>
-    		<article class="index-post-article">
+		<article class="index-post-article">
 			<div class="index-post-img">
-				<div class="index-meta-img">
+		    		<div class="index-meta-img">
 					<time class="date-img"><?php $this->date('d'); ?></time>
 					<time class="week-img"><?php $this->date('D'); ?></time>
-					<?php if (array_key_exists('weather',unserialize($this->___fields()))): ?><?php echo '<img class="icon-weather" src="/usr/themes/Diary/img/weather/'; ?><?php $this->fields->weather(); ?><?php echo '.png" alt=" ?><?php $this->fields->weather(); ?><?php echo '"/>'; ?><?php else: ?><?php echo '<img class="icon-weather" src="/usr/themes/Diary/img/weather/sunny.png" alt="sunny" />'; ?><?php endif; ?>
+					<?php if (array_key_exists('weather',unserialize($this->___fields()))): ?><?php _e('<img class="icon-weather" src="/usr/themes/Diary/img/weather/') ?><?php $this->fields->weather(); ?><?php _e('.png" alt="') ?><?php $this->fields->weather(); ?><?php _e('" />') ?><?php else: ?><?php _e('<img class="icon-weather" alt=“sunny” src="/usr/themes/Diary/img/weather/sunny.png" />') ?><?php endif; ?>
 				</div>
 				<a href="<?php $this->permalink() ?>">
-				<?php if (array_key_exists('img',unserialize($this->___fields()))): ?><?php echo '<div class="index-text-img" style="background-image: url('; ?><?php $this->fields->img(); ?><?php echo ')">'; ?><?php else: ?><?php preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);$imgCount = count($matches[0]);if($imgCount >= 1){$img = $matches[2][0];echo '<div class="index-text-img" style="background-image: url('.$img.')">';}else {echo '<div class="index-text-img" style="background-image: url(/usr/themes/Diary/img/'.rand(1,7).'.png)">';} ?><?php endif; ?></div>
-		    		<div class="text-img">
+					<?php if (array_key_exists('img',unserialize($this->___fields()))): ?><?php _e('<div class="index-text-img" style="background-image: url(') ?><?php $this->fields->img(); ?><?php _e(')">') ?><?php else: ?><?php preg_match_all("/\<img.*?src\=(\'|\")(.*?)(\'|\")[^>]*>/i", $this->content, $matches);$imgCount = count($matches[0]);if($imgCount >= 1){$img = $matches[2][0];_e('<div class="index-text-img" style="background-image: url('.$img.')">');}else {_e('<div class="index-text-img" style="background-image: url(/usr/themes/Diary/img/'.rand(1,7).'.png)">');} ?><?php endif; ?></div>
+		        	<div class="text-img">
 	    				<p class="index-content-img"><?php $this->excerpt(50, '...');?></p>
-				</div>
-				</a>
+		        	</div>
+	   			</a>
 		    	</div>
-			<div class="title-img">
-				<h2 class="index-title-img"><?php $this->title() ?></h2>
-			</div>
+	        <div class="title-img">
+	        	<h2 class="index-title-img"><?php $this->title() ?></h2>
+		</div>
 		</article>
 		<?php endwhile; ?>
 		<?php else: ?>
 		<?php while($this->next()): ?>
-	    <a href="<?php $this->permalink() ?>">
-	    	<article class="index-post">
-	        	<div class="index-meta">
+	    	<a href="<?php $this->permalink() ?>">
+	    		<article class="index-post">
+	        		<div class="index-meta">
 					<time class="date"><?php $this->date('d'); ?></time>
 					<time class="week"><?php $this->date('D'); ?></time>
 				</div>
@@ -48,19 +48,19 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 					<time><?php $this->date('H:i'); ?></time>
 					<h2 class="index-title"><?php $this->title() ?></h2>
 	    			<p class="index-content"><?php $this->excerpt(100, '...');?></p>
-		        </div>
-	        	<a href="<?php $this->permalink() ?>#comments">
-	        	<div class="index-comment">
-	            	<?php $this->commentsNum('', '1', '%d'); ?>
-	            </div>
-        		</a>
-	    	</article>
-	    </a>
+		        	</div>
+	        		<a href="<?php $this->permalink() ?>#comments">
+	        			<div class="index-comment">
+	            			<?php $this->commentsNum('', '1', '%d'); ?>
+	            			</div>
+        			</a>
+	    		</article>
+	    	</a>
 		<?php endwhile; ?>
 		<?php endif; ?>
 		<div class="page-navigator">
 			<?php $this->pageLink('Prev '); ?>
-			<span class="page-number"><?php if($this->_currentPage>0) echo 'Page '.$this->_currentPage.' of '; ?><?php echo ceil($this->getTotal() / $this->parameter->pageSize); ?></span>
+			<span class="page-number"><?php if($this->_currentPage>0) _e('Page '.$this->_currentPage.' of ')?><?php _e(ceil($this->getTotal() / $this->parameter->pageSize)) ?></span>
 			<?php $this->pageLink('Next','next'); ?>
 		</div>
 	</div>
