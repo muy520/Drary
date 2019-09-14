@@ -18,7 +18,6 @@ function myFunction(){document.getElementById("myDropdown").classList.toggle("sh
 </script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.6/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script type="text/javascript" src="<?php $this->options->themeUrl('js/pinglun.js'); ?>"></script>
 <script type="text/javascript" src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
 <script type="text/javascript">$(document).pjax('a', '#pjax-container')</script>
 <script type="text/javascript">window.onload=()=>{var eles=document.querySelectorAll('.index-text-img');var callback=(entries)=>{entries.forEach(item=>{if(item.intersectionRatio>0){var ele=item.target;var imgSrc=ele.getAttribute('data-src');if(imgSrc){var img=new Image();img.addEventListener('load',function(){ele.src=imgSrc;},false);ele.src=imgSrc;ele.removeAttribute('data-src');}}})};var observer=new IntersectionObserver(callback);eles.forEach(item=>{observer.observe(item);})}</script>
