@@ -73,7 +73,6 @@ function compressHtml($html_source) {
     }
     return $compress;
 }
-/* 显示下一篇 */
 function theNext($widget, $default = NULL)
 {
 $db = Typecho_Db::get();
@@ -94,8 +93,6 @@ echo $link;
 echo $default;
 }
 }
-
-/* 显示上一篇 */
 function thePrev($widget, $default = NULL)
 {
 $db = Typecho_Db::get();
@@ -115,7 +112,6 @@ echo $link;
 echo $default;
 }
 }
-/* at */
 function getCommentAt($coid){
     $db   = Typecho_Db::get();
     $prow = $db->fetchRow($db->select('parent')
