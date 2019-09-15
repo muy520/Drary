@@ -9,14 +9,6 @@
     <meta http-equiv="Cache-Control" content="no-transform"/>
     <meta name="applicable-device" content="pc,mobile"/>
     <title><?php $this->options->title(); ?></title>
-    <?php if ($this->is('post')) : ?>
-    <meta property="og:type" content="article"/>
-    <meta property="article:published_time" content="<?php $this->date('c'); ?>"/>
-    <meta property="article:author" content="<?php $this->author(); ?>" />
-    <meta property="article:published_first" content="<?php $this->options->title() ?>, <?php $this->permalink() ?>" />
-    <meta property="og:title" content="<?php $this->title() ?>" />
-    <meta property="og:url" content="<?php $this->permalink() ?>" />
-    <?php endif; ?>
 
     <!-- 使用url函数转换相关路径 -->
     <link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
