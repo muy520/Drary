@@ -10,9 +10,7 @@
 </footer>
 
 <?php $this->footer(); ?>
-<script>
-function myFunction(){document.getElementById("myDropdown").classList.toggle("show")}window.onclick=function(e){if(!e.target.matches('.nav-icon')){var myDropdown=document.getElementById("myDropdown");if(myDropdown.classList.contains('show')){myDropdown.classList.remove('show')}}}
-</script>
+<script>function myFunction(){document.getElementById("myDropdown").classList.toggle("show")}window.onclick=function(e){if(!e.target.matches('.nav-icon')){var myDropdown=document.getElementById("myDropdown");if(myDropdown.classList.contains('show')){myDropdown.classList.remove('show')}}}</script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.6/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad()</script>
 <script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
