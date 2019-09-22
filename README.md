@@ -2,7 +2,14 @@
 ![Thumbnail](screenshot.png)
 A Typecho Theme
 
+## 首页缩略图
+自带10张缩略图
+当文章又图时会用文章第一张图做缩略图
+自定义缩略图 ：设置自定义字段的名称为 `img` 值则添加图片链接
+
 ## weather
+首页天气默认 sunny 
+设置自定义字段的字段名称为 `weather` ， 字符值为以下
 + cloudy day    -->  阴天
 + cloudy        -->  多云
 + lightning     -->  闪电
