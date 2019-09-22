@@ -8,8 +8,8 @@ A Typecho Theme
 + 自定义缩略图 ：设置自定义字段的名称为 `img` 值则添加图片链接
 
 ## weather
-＞ 首页天气默认 sunny ，
-＞ 需要自定义天气时请　设置自定义字段的字段名称为 `weather` ， 字符值为以下
+ 首页天气默认 sunny ，
+ 需要自定义天气时请　设置自定义字段的字段名称为 `weather` ， 字符值为以下
 + cloudy day    -->  阴天
 + cloudy        -->  多云
 + lightning     -->  闪电
