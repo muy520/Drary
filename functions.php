@@ -7,13 +7,6 @@ function themeConfig($form) {
     
     $searchUrl = new Typecho_Widget_Helper_Form_Element_Text('searchUrl', NULL, NULL, _t('站点 搜索 地址'), _t('在这里填入一个搜索 URL 地址,'));
     $form->addInput($searchUrl);
-    
-    $indexImg = new Typecho_Widget_Helper_Form_Element_Radio('indexImg',
-        array('able' => _t('启用'),
-            'disable' => _t('禁止'),
-        ),
-        'disable', _t('主页设置'), _t('默认禁止，启用后开启有图模式'));
-    $form->addInput($indexImg);
 
     $htmlCompress = new Typecho_Widget_Helper_Form_Element_Radio('htmlCompress',
         array('able' => _t('启用'),
