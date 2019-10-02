@@ -10,11 +10,11 @@
 </footer>
 
 <?php $this->footer(); ?>
-<script>function myFunction(){document.getElementById("myDropdown").classList.toggle("show")}window.onclick=function(e){if(!e.target.matches('.nav-icon')){var myDropdown=document.getElementById("myDropdown");if(myDropdown.classList.contains('show')){myDropdown.classList.remove('show')}}}</script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.0/jquery.pjax.js"></script>
+<script>$(document).pjax('a', {timeout:5000})</script>
 <script src="https://cdn.bootcss.com/highlight.js/9.15.6/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
-<script>$(document).pjax('a', '#pjax-container')</script>
+<script>function myFunction(){document.getElementById("myDropdown").classList.toggle("show")}window.onclick=function(e){if(!e.target.matches('.nav-icon')){var myDropdown=document.getElementById("myDropdown");if(myDropdown.classList.contains('show')){myDropdown.classList.remove('show')}}}</script>
 <script>window.onload=()=>{var eles=document.querySelectorAll('.index-text-img');var callback=(entries)=>{entries.forEach(item=>{if(item.intersectionRatio>0){var ele=item.target;var imgSrc=ele.getAttribute('data-src');if(imgSrc){var img=new Image();img.addEventListener('load',function(){ele.src=imgSrc;},false);ele.src=imgSrc;ele.removeAttribute('data-src');}}})};var observer=new IntersectionObserver(callback);eles.forEach(item=>{observer.observe(item);})}</script>
 </body>
 </html>
